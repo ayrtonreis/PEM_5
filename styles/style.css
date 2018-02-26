@@ -1,0 +1,577 @@
+/* CSS Document */
+
+@font-face {
+  font-family: 'GrilliType';
+  src: url("ubuntu-light.ttf"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'GrilliTypeHaptik';
+  src: url("gt-haptik-trial-regular.ttf"); /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'ArialRoundedExtraBold';
+  src: url("arial-rounded-mt-extrabold.ttf"); /* Safari, Android, iOS */
+}
+
+
+* { 
+	text-shadow: none !important; 
+	font-family: GrilliType;	
+}
+
+div.bg{
+	position: fixed; 
+  	top: 0; 
+  	left: 0; 
+	height: 100%;
+ 	width: auto;
+}
+
+img#bg1{
+	width: 100%;
+}
+
+div#appHeader{
+	position: fixed;
+	background-color: #FFDB00;
+	width: 100%;
+	height: 40px;
+	z-index: 12!important;
+	-webkit-user-select: none;
+  	user-select: none;
+}
+
+div#appHeader_login{
+	position: fixed;
+	background-color: rgba(255,219,0,0.32);
+	width: 100%;
+	height: 40px;
+	z-index: 12!important;
+	-webkit-user-select: none;
+  	user-select: none;
+}
+
+div#appTitle{
+	color: #242D90;
+	position: absolute;
+  	top: 50%;
+	width: 100%;
+  	transform: translateY(-50%);
+	font-size: 40px;
+	font-family: ArialRoundedExtraBold;
+}
+
+img#moreOptions{
+	float: right;
+	width: 24px;
+	height: auto;
+	margin-right: 20px;
+	margin-top: 8px;
+}
+
+div[data-role="content"]{
+	position:relative !important;
+	z-index: 0 !important;	
+}
+
+div#notesList > div[data-role="content"] {
+	margin-top: 32px;
+}
+
+ul {
+    list-style:none; /*gets rid of the list bullets*/
+    padding-left:0;
+}
+
+ul.listNotes > li{
+	/*background: #FCE6CF;*/
+	border-radius: 2px;
+	padding: 1em;
+	margin: 1em;
+	margin-left: 0;
+	position: relative;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.40);
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: left;	
+	word-wrap: break-word; /*long words break and wrap onto the next line*/
+	-webkit-user-select: none;
+  	user-select: none;
+}
+
+ul.listNotes > li {
+	display: flex; /*PUT BLOCKS SIDE BY SIDE INSIDE LI*/
+	background: #FCE6CF;
+	border-radius: 2px;
+	padding: 1em;
+	margin: 1em;
+	margin-left: 0;
+	position: relative;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.25), 0 1px 1px rgba(0,0,0,0.40);
+	left: 50%;
+	transform: translate(-50%, 0);
+	text-align: left;	
+	word-wrap: break-word; /*long words break and wrap onto the next line*/
+	-webkit-user-select: none;
+  	user-select: none;
+	overflow: hidden; /*IMPORTANT for images inside li*/
+}
+
+[data-s="true"] {
+    background:#DB7D4C !important;
+	box-shadow: none;
+}
+
+[data-wrapper-s="true"]{
+	box-sizing: border-box;
+	border: 4px solid #FF5F00;
+	box-shadow: none !important;
+}
+.popupContainer.ui-footer {
+	visibility: hidden;
+	position: fixed;
+}
+
+#popupSelect, #barOptions, #barOptionsImgs {
+	background-color: white;	
+}
+
+#barOptionsImgs{
+	visibility: hidden;	
+}
+
+.popup_btn, .bar_btn{
+	display: inline-block;
+	width: 80px;
+	padding: 8px 0px;	
+	font-weight: bold;
+	-webkit-user-select: none;
+  	user-select: none;
+	
+}
+.popupContainer#edit, .popupContainer#delete {
+	border-width: 1px;
+	border-color: rgba(0, 0, 0, 0.1);
+	border-right-style: solid;
+}
+
+textarea#noteInput {
+	width: 95%;
+	background-color:white;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.dateTimeTable {
+	display: table;
+	border-spacing: 1em 0;
+	margin-left:auto; 
+    margin-right:auto;
+	
+}
+
+.dateInputForm {
+	display: table-cell;
+	width: 190px;
+}
+
+.timeInputForm {
+	display: table-cell;
+	width: 150px;
+}
+
+.ui-field-contain{
+	border-bottom-width: 0 !important;	//gets rid of an annoying dividing line from Jquery Mobile
+}
+
+label.dateTimeLabel {
+	display: table-cell;	
+}
+
+#labeDateRemainder {     //CHECK THIS - the id seems to be incorrect
+	margin-top: 30px;
+	margin-bottom: 10px;
+	margin-left: 0;	
+	margin-rigth: auto;
+}
+
+/* IMAGES */
+
+img.imgInNote {
+	position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  transform: translate(-50%,-50%);
+  overflow:scroll;
+}
+
+.blockImgInNote img[data-orientation="portrait"] {
+  width: 100%;
+  height: auto;
+}
+
+div.textInLi {
+	max-height: 56px;
+	overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+div.picCounter {
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+	text-align:center;
+	width: 14px;
+	font-size:12px;
+	color: white;
+	background-color:#FF975E;
+	float: left;
+	position: absolute;
+	z-index: 1;	
+	height: auto;
+	padding: 2px;
+	margin-left: 125px;
+	margin-top: 52px;
+	border-radius: 10px 10px 1px 10px;
+	box-shadow: 0px 0px 1px 0px rgba(0,0,0,1);
+}
+
+div#picThumbnails {
+    margin-left: 5%;
+    margin-top: 20px;
+	-webkit-user-select: none;
+  	user-select: none;
+}
+
+.thumbWrapper {
+  margin: auto; 
+  position: relative;
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  float: left;
+  margin: 0 8px 8px 0;
+  box-shadow: 1px 1px 1px 0px rgba(0,0,0,1);
+}
+.thumbWrapper img.thumbNote{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 100%;
+  width: auto;
+  transform: translate(-50%,-50%);
+}
+
+.thumbWrapper img[data-orientation="portrait"] {
+  width: 100%;
+  height: auto;
+}
+
+img#userPic{
+	width: 200px;
+	left: 15px;
+	position: absolute;
+	top: 60px;
+}
+
+div#userName{
+	position: relative;
+	float: top;
+	text-align: center;
+	top: 264px;
+	font-size: 20px;
+}
+
+div#swipeMenu{
+	background: #FFD600;
+	width: 230px;
+	position: fixed; 
+	top:0; 
+	bottom:0; 
+	left:0;	
+	z-index: 12!important;
+	transform: translate(-260px, 0);
+}
+
+div#classesListWrapper{
+	position: relative;
+	background: rgba(255,255,255,0.59);
+	margin-top: 280px;
+	height: 900px;
+}
+
+ul#classesList{
+	top: 10px;
+	position: relative;
+	font-size: 22px;
+	text-align: left;
+}
+
+ul#classesList > li{
+	font-family: GrilliTypeHaptik;
+	padding: 4%;
+	margin-left: 40px;
+}
+
+div.inputLogin{
+	margin-left: auto;
+    margin-right: auto;
+}
+
+div#btn_logIn{
+	margin-top: 40px;
+	width: 100px;
+	padding: 10px;
+    background: #242D90;
+    margin-left: auto;
+	margin-right: auto;
+}
+
+div.btn_log_wrapper{
+	color: white;
+	 font-size: 24px;
+	
+}
+
+div.inputLogin{
+	position: absolute;
+	top: -10;
+    left: 50%;
+    height: 30%;
+    width: 50%;
+    margin: 30% 0 0 -25%;
+}
+
+table.inputLogin{
+	margin-left: auto;
+	margin-right: auto;	
+}
+
+
+table.inputLogin td{
+	width: 160px;	
+}
+
+label.logIn{
+	font-family: GrilliTypeHaptik;
+	font-size: 20px !important;
+	text-align: right;
+	margin-right: 16px !important;
+}
+
+/*div.logIn{
+	margin-left: auto;
+    margin-right: auto;
+	width: 20%;
+	
+}
+
+label.logIn{
+	display: inline-block;
+	text-align: right;
+	width: 100px !important;
+	
+}*/
+
+div#calendar{
+	position: absolute;
+	top: 80px;	
+	width: 60%;
+	margin-left: 20%;
+}
+
+div#calendar ul {list-style-type: none;}
+
+/* Month header */
+.month {
+    padding: 10px 20px;
+    background: #FFA600;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Previous button inside month header */
+.month .prev {
+    float: left;
+    padding-top: 1px;
+}
+
+/* Next button */
+.month .next {
+    float: right;
+    padding-top: 1px;
+}
+
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color:#777;
+}
+
+/* Highlight the "current" day */
+.days .active {
+    padding: 5px;
+    background: #FFA600;
+    color: white !important
+}
+
+/* Add media queries for smaller screens */
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+
+div#cardapio{
+	position: relative;
+	margin-top: 340px;	
+}
+
+div#cardapio_2{
+	position: relative;
+	margin-top: 70px;	
+}
+
+table.cardapio_info{
+	position: relative;
+	margin-top: -16px;
+	margin-left: auto;
+	margin-right: auto;	
+	background-color: rgba(255,255,255,0.6);
+}
+
+td.description_title{
+	color: #242D90;
+	vertical-align: top;
+	text-align: right;
+	padding-right: 8px;	
+}
+
+td.description{
+	max-width: 200px;
+	text-align: left;	
+}
+
+h4#almoco{
+	margin-left: -290px;
+}
+
+h4{
+	color: #242D90;	
+}
+
+h4#jantar{
+	margin-left: -300px;
+}
+
+h2{
+	color: #242D90;
+	margin-bottom: -10px;	
+}
+
+div#payment_options{
+	position: relative;
+	margin-top: 100px;
+}
+
+table.payments{
+	border-spacing: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10%;	
+}
+
+td.payments{
+	color: white;
+	background-color: #242D90;
+	width: 160px;
+	padding: 20px;	
+}
+
+div.my_credits{
+	position: relative;
+	top: 44px;	
+	margin-left: auto;
+	margin-right: auto;
+}
+
+h2.my_credits{
+	text-align: center;	
+}
+
+div#amount{
+	margin-top: 16px;	
+}
+
+div#reais{
+	font-size: 48px;	
+}
+
+div#total_credits{
+	color: #3C3C3C; 	
+}
+
+span#total_refeicoes{
+	font-size: 26px;	
+}
+
+
+div.center_box{
+	position: relative;
+  top: 50%;
+  -webkit-transform: translateY(50%);
+}
+
+div#footer{
+	position: fixed;
+	width: 100%;
+    bottom: 10px;
+  
+}

@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Untitled Document</title>
+    <link type="text/css" rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/jquery.mobile-1.4.5.min.css">
+
+    <script src="scripts/jquery-2.2.4.min.js"></script>
+    <script src="scripts/jquery.animate-colors-min.js"></script>
+    <script src="scripts/jquery.transit.min.js"></script>
+	<script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+</head>
+
+<body>
+<script src="cordova.js"></script>
+
+    
+		<div div data-role="page" id="logIn" style="text-align:center; background-image: url('images/background_2.jpg') !important; background-attachment: fixed !important; background-repeat: no-repeat; background-size: cover;">
+        <div id="appHeader_login">
+            	<div>
+					<div id="appTitle">Bandeco</div>
+                </div>
+		</div>    
+    	<div class="inputLogin">
+        <table class="inputLogin">
+                <tr>
+                    <td><label for="login" class="logIn">Nº USP:</label></td>
+                    <td class="input"><input type="text"  id="userLogIn" class="logIn" value=""/></td>
+                </tr>
+                </table>	
+                
+                <table class="inputLogin">
+                <tr>
+                    <td><label for="password" class="logIn">Senha:</label></td>
+                    <td class="input"><input type="password" name="password" id="password" class="logIn" value=""/></td>
+                </tr>
+       </table>
+        
+        <div id="btn_logIn">
+        	<div class="btn_log_wrapper">entrar</div>
+        </div>
+        </div>
+       
+	</div>
+
+	<div data-role="page" id="notesList" style="text-align:center;">
+    	<div class="bg">
+        	<img id="bg1" src="images/background_1.jpg">
+        </div>
+            
+            <div id="appHeader">
+            	<div>
+					<div id="appTitle">Bandeco</div>
+                </div>
+                <img id="moreOptions" src="images/moreOptions.png">
+			</div>
+            
+            <div class="my_credits">
+            	<h2 class="my_credits">Créditos Disponíveis</h2>
+                <div id="amount">
+                	<div id="reais">R$ 10.85</div>
+                    <div id="total_credits"><span id="total_refeicoes">5 refeições</span><span id="total_troco">+R$ 1.35</span></div>
+                </div>
+            </div>
+            
+            <div id="cardapio_2">
+            	<h2 id="cardapio_title">Cardápio do dia</h2>
+                
+                	<table class="cardapio_info">
+                    	<h4 class="meal" id="almoco">Almoço</h4>
+                    	<tr id="cardapio_principal">
+                            <td class="description_title">Prato Principal:</td>
+                            <td class="description">Arroz/Feijão Preto/Arroz Integral</td>
+                        </tr>
+                        <tr id="cardapio_salada">
+                            <td class="description_title">Salada:</td>
+                            <td class="description">Agrião/Cebola</td>
+                        </tr>
+                        <tr id="cardapio_guarnicao">
+                            <td class="description_title">Guarnição:</td>
+                            <td class="description">Peixada com leite de coco</td>
+                        </tr>
+                        <tr id="cardapio_vegetariano">
+                            <td class="description_title">Opção vegetariana:</td>
+                            <td class="description">PVT com azeitonas</td>
+                        </tr>
+                        <tr id="cardapio_acompanhamento">
+                            <td class="description_title">Acompanhamento:</td>
+                            <td class="description">Farofa Rica</td>
+                        </tr>
+                        <tr id="cardapio_sobremesa">
+                            <td class="description_title">Sobremesa:</td>
+                            <td class="description">Pudim de leite</td>
+                        </tr>
+                    </table>
+                    
+                    <table class="cardapio_info">
+                    	<h4 class="meal" id="jantar">Jantar</h4>
+                    	<tr id="cardapio_principal">
+                            <td class="description_title">Prato Principal:</td>
+                            <td class="description">Arroz/Feijão/Arroz Integral</td>
+                        </tr>
+                        <tr id="cardapio_salada">
+                            <td class="description_title">Salada:</td>
+                            <td class="description">Pepino/Alface</td>
+                        </tr>
+                        <tr id="cardapio_guarnicao">
+                            <td class="description_title">Guarnição:</td>
+                            <td class="description">Bife acebolado</td>
+                        </tr>
+                        <tr id="cardapio_vegetariano">
+                            <td class="description_title">Opção vegetariana:</td>
+                            <td class="description">PVT com molho de tomate</td>
+                        </tr>
+                        <tr id="cardapio_acompanhamento">
+                            <td class="description_title">Acompanhamento:</td>
+                            <td class="description">Batata doce</td>
+                        </tr>
+                        <tr id="cardapio_sobremesa">
+                            <td class="description_title">Sobremesa:</td>
+                            <td class="description">Brigadeiro</td>
+                        </tr>
+                    </table>
+            
+                <div data-role="content">
+                    <div id="savedNotes">
+                        <ul class="listNotes" id="categoryExample"></ul>
+                    </div>
+                </div>
+       		</div>
+    </div>
+    
+    <div data-role="page" id="payments" style="text-align:center;">
+    	<div class="bg">
+        	<img id="bg1" src="images/background_1.jpg">
+        </div>
+        
+            <div id="appHeader">
+            	<div>
+					<div id="appTitle">Bandeco</div>
+                </div>
+                <img id="moreOptions" src="images/moreOptions.png">
+			</div>
+            
+            <div id="payment_options">
+            	<h2 id="title_payments">Opções de Pagamento</h2>
+                
+                	<table class="payments">
+                    	<tr class="payments">
+                        	<td class="payments">Cadastrar Forma<br>de Pagamento</td>
+                            <td class="payments">Recarga via<br>Cartão</td>
+                        </tr>
+                        <tr class="payments">
+                        	<td class="payments">Recarga via<br>Boleto</td>
+                            <td class="payments">Histórico de<br>Recargas</td>
+                        </tr>
+                    </table>
+       		</div>
+    </div>
+    
+	
+
+	<div div data-role="page" id="info" style="text-align:center; background-image: url('images/background_2.jpg') !important; background-attachment: fixed !important; background-repeat: no-repeat; background-size: cover;">
+    
+    		<div id="appHeader">
+            	<div>
+					<div id="appTitle">Bandeco</div>
+                </div>
+                <img id="moreOptions" src="images/moreOptions.png">
+			</div>
+            
+        <div class="center_box">
+        	<h4>Criadores: </h4>
+            
+            Alberto Marques<br>
+            André Cecci<br>
+            Ayrton dos Reis Silva<br>
+            Guilherme Barreto<br>
+            Isaak Machado<br>
+            Leonardo Denari Ruiz Duran<br><br>
+			
+            <h4>Projeto destinado ao curso:</h4>
+            SEM0537 Problemas de Eng Mecatrônica V<br>
+            
+        </div>
+       
+       		<div id="footer">
+            © Grupo 4<br>
+            2016
+            </div>
+       
+	</div>
+    
+    	<div div data-role="page" id="horarios" style="text-align:center; background-image: url('images/background_2.jpg') !important; background-attachment: fixed !important; background-repeat: no-repeat; background-size: cover;">
+    
+    		<div id="appHeader">
+            	<div>
+					<div id="appTitle">Bandeco</div>
+                </div>
+                <img id="moreOptions" src="images/moreOptions.png">
+			</div>
+        <div class="center_box">
+        	<h4>Horário de Funcionamento: </h4>
+            
+            No Campus 1, são servidos:<br>
+            - Café da manhã: das 7 às 8 horas (seg a sex)<br>
+            - Almoço: das 11h-13h15 (seg a sex); 11h30-13h (sab)<br>
+            - Jantar: das 17h15 às 19h15 (seg a sex)<br><br>
+            
+            No Campus 2, são servidos:<br>
+            - Almoço: das 11h-12h45 (seg a sex) <br>
+            
+        </div>
+       
+	</div>
+
+	<div data-role="page" id="menu" style="text-align:center;">
+    	<div class="bg">
+        	<img id="bg1" src="images/background_1.jpg">
+        </div>
+            
+            <div id="appHeader">
+            	<div>
+					<div id="appTitle">Bandeco</div>
+                </div>
+                <img id="moreOptions" src="images/moreOptions.png">
+			</div>
+            
+            <div id="calendar">
+            	<div class="month"> 
+                  <ul>
+                    <li class="prev">&#10094;</li>
+                    <li class="next">&#10095;</li>
+                    <li>
+                      Dezembro 2016
+                    </li>
+                  </ul>
+                </div>
+                
+                <ul class="weekdays">
+                  <li>S</li>
+                  <li>T</li>
+                  <li>Q</li>
+                  <li>Q</li>
+                  <li>S</li>
+                  <li>S</li>
+                  <li>D</li>
+                </ul>
+                
+                <ul class="days"> 
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                  <li>7</li>
+                  <li>8</li>
+                  <li class="active">9</li>
+                  <li>10</li>
+                  <li>11</li>
+                  <li>12</li>
+                  <li>13</li>
+                  <li>14</li>
+                  <li>15</li>
+                  <li>16</li>
+                  <li>17</li>
+                  <li>18</li>
+                  <li>19</li>
+                  <li>20</li>
+                  <li>21</li>
+                  <li>22</li>
+                  <li>23</li>
+                  <li>24</li>
+                  <li>25</li>
+                  <li>26</li>
+                  <li>27</li>
+                  <li>28</li>
+                  <li>29</li>
+                  <li>30</li>
+                  <li>31</li>
+                  <li></li>
+                </ul>
+            </div>
+            
+            <div id="cardapio">
+            	<h2 id="cardapio_title">Cardápio do dia</h2>
+                
+                	<table class="cardapio_info">
+                    	<h4 class="meal" id="almoco">Almoço</h4>
+                    	<tr id="cardapio_principal">
+                            <td class="description_title">Prato Principal:</td>
+                            <td id="text_principal" class="description">Arroz/Feijão Preto/Arroz Integral</td>
+                        </tr>
+                        <tr id="cardapio_salada">
+                            <td class="description_title">Salada:</td>
+                            <td id="text_salada" class="description">Agrião/Cebola</td>
+                        </tr>
+                        <tr id="cardapio_guarnicao">
+                            <td class="description_title">Guarnição:</td>
+                            <td id="text_guarnicao" class="description">Peixada com leite de coco</td>
+                        </tr>
+                        <tr id="cardapio_vegetariano">
+                            <td class="description_title">Opção vegetariana:</td>
+                            <td id="text_vegetariano" class="description">PVT com azeitonas</td>
+                        </tr>
+                        <tr id="cardapio_acompanhamento">
+                            <td class="description_title">Acompanhamento:</td>
+                            <td id="text_acompanhamento" class="description">Farofa Rica</td>
+                        </tr>
+                        <tr id="cardapio_sobremesa">
+                            <td class="description_title">Sobremesa:</td>
+                            <td id="text_sobremesa" class="description">Pudim de leite</td>
+                        </tr>
+                    </table>
+                    
+                    <table class="cardapio_info">
+                    	<h4 class="meal" id="jantar">Jantar</h4>
+                    	<tr id="cardapio_principal">
+                            <td class="description_title">Prato Principal:</td>
+                            <td id="janta_principal" class="description">Arroz/Feijão/Arroz Integral</td>
+                        </tr>
+                        <tr id="cardapio_salada">
+                            <td class="description_title">Salada:</td>
+                            <td id="janta_salada" class="description">Pepino/Alface</td>
+                        </tr>
+                        <tr id="cardapio_guarnicao">
+                            <td class="description_title">Guarnição:</td>
+                            <td id="janta_guarnicao" class="description">Bife acebolado</td>
+                        </tr>
+                        <tr id="cardapio_vegetariano">
+                            <td class="description_title">Opção vegetariana:</td>
+                            <td id="janta_vegetariano" class="description">PVT com molho de tomate</td>
+                        </tr>
+                        <tr id="cardapio_acompanhamento">
+                            <td class="description_title">Acompanhamento:</td>
+                            <td id="janta_acompanhamento" class="description">Batata doce</td>
+                        </tr>
+                        <tr id="cardapio_sobremesa">
+                            <td class="description_title">Sobremesa:</td>
+                            <td id="janta_sobremesa" class="description">Brigadeiro</td>
+                        </tr>
+                    </table>
+            
+                <div data-role="content">
+                    <div id="savedNotes">
+                        <ul class="listNotes" id="categoryExample"></ul>
+                    </div>
+                </div>
+       		</div>
+    </div>
+
+    
+    <!--Overlay panel-->
+    <div id="swipeMenu" data-visible="false">
+            	<img id="userPic" src="users/8549521.jpg">
+             	<div id="userName">Ayrton</div>
+            
+            	<div id="swipeContent">
+                  <div id="classesListWrapper">
+                  	<ul id="classesList">
+                      <li id="option_recargas">RECARGAS</li>
+                      <li id="option_cardapio">CARDÁPIO</li>
+                      <li id="option_horarios">HORÁRIOS</li>
+                      <li id="option_ajuda">AJUDA</li>
+                      <li id="option_info">INFO</li>
+                      <li id="option_sair">SAIR</li>
+                  	</ul>
+                  </div>
+                </div>
+     </div>
+    
+<script type="text/javascript" src="scripts/script.js"></script>
+</body>
+
+</html> 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.bandeco"
+    version   = "1.0.0">
+	
+<name>Bandeco</name>
+<description></description>
+<author></author>
+<icon src="images/icon.png" />
+
+<platform name = "android" />
+
+<!-- Plugins -->
+<!-- PhoneGap plugins for PhoneGap Build to attach to build -->
+
+<!--<gap:plugin name="org.apache.cordova.device" source="pgb" /> 
+<gap:plugin name="org.apache.cordova.splashscreen" source="pgb" /> 
+<gap:plugin name="org.apache.cordova.camera" /> 
+<gap:plugin name="org.apache.cordova.file" />
+<gap:plugin name="org.apache.cordova.file-transfer" />
+<gap:plugin name="org.apache.cordova.media" />
+<gap:plugin name="org.apache.cordova.statusbar"/> 
+<plugin name="org.apache.cordova.vibration" spec="0.3.13" source="pgb" />
+<plugin name="io.litehelpers.cordova.sqlite" spec="0.7.10" source="pgb" /> ERROR -->
+
+<plugin name="cordova-plugin-device" source="npm" />
+<plugin name="cordova-plugin-splashscreen" source="npm" />
+<plugin name="cordova-plugin-camera" source="npm" />
+<plugin name="cordova-plugin-file" source="npm" />
+<plugin name="cordova-plugin-file-transfer" source="npm" />
+<plugin name="cordova-plugin-media" source="npm" />
+<plugin name="cordova-plugin-statusbar" source="npm" />
+<plugin name="cordova-plugin-vibration" source="npm" />
+<plugin name="cordova-sqlite-plugin" source="npm" />
+
+
+<plugin name="cordova-open" spec="1.0" />
+
+<preference name="phonegap-version" value="cli-5.1.1" />
+
+</widget>
